@@ -1,0 +1,32 @@
+@import "../styles/variables.scss";
+
+.wrap {
+    text-align: center;
+    width: 100%;
+    position: relative;
+    @media screen and (min-width: $tablet) {
+        max-width: 24rem;
+    }
+    @media screen and (min-width: $desktop) {
+        text-align: initial;
+        max-width: 28rem;
+    }
+    h2 {
+        margin-bottom: 16px;
+    }
+    p {
+        font-size: 0.9375rem;
+        line-height: 1.56rem;
+        @media screen and (min-width: $tablet) {
+            font-size: 1.125rem;
+            line-height: 1.875rem;
+        }
+    }
+}
+
+.black {
+    color: var(--EbonyClay);
+}
+.white {
+    color: var(--White);
+}

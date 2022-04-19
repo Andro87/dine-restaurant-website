@@ -1,0 +1,295 @@
+@import "./variables.scss";
+
+.main_container {
+    background: url("../public/images/booking/hero-bg-mobile.jpg");
+    background-position: top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    @media screen and(min-width:$tablet) {
+        background: url("../public/images/booking/hero-bg-tablet.jpg");
+        background-position: top;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    @media screen and(min-width:$desktop) {
+        background: url("../public/images/booking/hero-bg-desktop.jpg") top,
+            url("../svgs/patterns/pattern-curve-bottom-right.svg") 0 300px;
+        background-size: 100% 600px, 60% 600px;
+        background-repeat: no-repeat;
+    }
+}
+
+.header {
+    padding-top: 56px;
+    margin-bottom: 40px;
+    text-align: center;
+    @media screen and(min-width:$tablet) {
+        text-align: initial;
+        margin-bottom: 64px;
+        margin-left: 40px;
+    }
+    @media screen and(min-width:$desktop) {
+        margin: initial;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 150px;
+        padding-top: 65px;
+        width: 80%;
+    }
+
+    img {
+        width: 82px;
+    }
+}
+
+.main {
+    color: var(--White);
+    padding: 0 24px 85px;
+    display: grid;
+    row-gap: 90px;
+    grid-template-columns: repeat(1, 1fr);
+    @media screen and(min-width:$tablet) {
+        row-gap: initial;
+        max-width: 75%;
+        margin: auto;
+        margin-bottom: 120px;
+        padding: 0;
+    }
+
+    @media screen and(min-width:$desktop) {
+        grid-template-columns: repeat(2, 1fr);
+        width: 80%;
+        max-width: initial;
+        margin: auto;
+
+        margin-bottom: 100px;
+    }
+}
+
+.main_info {
+    text-align: center;
+    @media screen and(min-width:$desktop) {
+        text-align: start;
+        max-width: 24rem;
+    }
+    p {
+        margin-top: 24px;
+        margin-bottom: 32px;
+        line-height: 1.56rem;
+        font-size: 0.9375rem;
+        @media screen and(min-width:$tablet) {
+            margin-top: 16px;
+            margin-bottom: 40px;
+            font-size: 1.125rem;
+            line-height: 1.875rem;
+        }
+    }
+}
+
+.btn_book {
+    background: transparent;
+    border: 1px solid var(--White);
+    color: var(--White);
+    padding: 24px;
+    width: 245px;
+    font-family: "spartan";
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 2px;
+    @media screen and(min-width:$tablet) {
+        display: none;
+    }
+}
+.main_form {
+    background-color: var(--White);
+    padding: 32px;
+    box-shadow: 0px 75px 100px -50px rgba(56, 66, 85, 0.503223);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    @media screen and(min-width:$tablet) {
+        padding: 48px;
+    }
+    @media screen and(min-width:$desktop) {
+        max-width: 36rem;
+    }
+
+    &::after {
+        @media screen and (min-width: $desktop) {
+            display: initial;
+            content: url("../svgs/patterns/pattern-lines.svg");
+            position: absolute;
+            z-index: -1;
+            left: -80px;
+            bottom: -30px;
+        }
+    }
+}
+
+.main_input {
+    font-family: "spartan";
+    font-weight: 400;
+    font-size: 1.125rem;
+    color: var(--CodGray);
+    text-indent: 8px;
+    border: none;
+    border-bottom: 1px solid var(--LightGray);
+    padding-bottom: 16px;
+    margin-bottom: 32px;
+    width: 100%;
+    &::-webkit-inner-spin-button {
+        appearance: none;
+    }
+    &::placeholder {
+        opacity: 0.5;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.main_input_box {
+    display: grid; /**/
+    @media screen and(min-width:$tablet) {
+        grid-template-columns: 10rem 1fr; /**/
+        align-items: center;
+        position: relative;
+    }
+    label {
+        font-family: "spartan";
+        font-weight: 400;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        color: var(--CodGray);
+    }
+}
+
+.input_wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+    input {
+        text-indent: 0;
+        text-align: center;
+        &::placeholder {
+            text-align: center;
+        }
+    }
+}
+.select_container {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--LightGray);
+    padding-bottom: 16px;
+    margin-bottom: 32px;
+    color: var(--CodGray);
+}
+.select_container .main_input {
+    border-bottom: initial;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    &::placeholder {
+        opacity: 1;
+    }
+}
+.btn_open_box {
+    background-color: transparent;
+    margin-left: 10px;
+    border: initial;
+    &:hover {
+        cursor: pointer;
+    }
+}
+.open_box {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    padding: 16px 8px 0;
+    z-index: 2;
+    background-color: var(--White);
+    box-shadow: 0px 15px 25px rgba(56, 66, 85, 0.24623);
+    p {
+        margin-bottom: 16px;
+        font-size: 0.8rem;
+        margin-left: auto;
+    }
+}
+.choise_wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    img {
+        width: 10px;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.main_input_people {
+    position: relative;
+
+    input {
+        text-indent: 0;
+        &::placeholder {
+            font-weight: 700;
+            color: hsla(0, 0%, 8%, 1);
+            text-align: center;
+            opacity: 1;
+        }
+    }
+}
+.btn_people {
+    background: none;
+    border: none;
+    position: absolute;
+}
+.minus {
+    left: 10px;
+}
+.plus {
+    right: 10px;
+}
+.btn_reservation {
+    background: var(--CodGray);
+    border: none;
+    color: var(--White);
+    padding: 18px 0;
+    width: 100%;
+    max-width: 245px;
+    font-family: "spartan";
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 2px;
+    align-self: center;
+    @media screen and(min-width:$tablet) {
+        max-width: initial;
+    }
+}
+
+.error_message {
+    font-family: "spartan";
+    font-weight: 500;
+    font-size: 0.625rem;
+    color: var(--Alert);
+    position: relative;
+    bottom: 25px;
+    left: 8px;
+}
+.error_message_box {
+    bottom: 0;
+    @media screen and(min-width:$tablet) {
+        position: absolute;
+        bottom: 10px;
+    }
+}
+.error_input {
+    color: var(--Alert);
+    border-bottom: 1px solid var(--Alert);
+    outline: none;
+    &::placeholder {
+        color: var(--Alert);
+    }
+}

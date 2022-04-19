@@ -1,0 +1,89 @@
+@import "../styles/variables.scss";
+
+.main {
+    position: relative;
+    width: 100%;
+    background-color: var(--Mirage);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &::before {
+        content: "";
+        background: url(../public/images/homepage/hero-bg-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: absolute;
+        width: 100%;
+        height: 250px;
+        @media screen and (min-width: $tablet) {
+            background: url("../public/images/homepage/hero-bg-tablet.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            height: 370px;
+        }
+        @media screen and (min-width: $desktop) {
+            background: url("../public/images/homepage/hero-bg-desktop.jpg")
+                right;
+            background-repeat: no-repeat;
+            background-size: cover;
+            bottom: 0;
+            right: 0;
+            height: 100%;
+            width: 65%;
+        }
+    }
+}
+.main_wrap {
+    @media screen and (min-width: $desktop) {
+        width: 80%;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.main_info {
+    color: var(--White);
+    text-align: center;
+    padding: 0 24px 150px;
+    margin-top: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (min-width: $tablet) {
+        padding: 0 40px 215px;
+        margin-top: 370px;
+    }
+    @media screen and (min-width: $desktop) {
+        align-items: initial;
+        padding: 65px 0 200px;
+        margin-top: 0;
+        text-align: initial;
+    }
+    h1 {
+        margin-top: 32px;
+        @media screen and (min-width: $desktop) {
+            margin-top: 150px;
+        }
+    }
+    p {
+        font-size: 0.9375rem;
+        margin: 24px 0 32px;
+        line-height: 1.56rem;
+        @media screen and (min-width: $tablet) {
+            font-size: 1.125rem;
+            margin-bottom: 24px;
+        }
+        @media screen and (min-width: $desktop) {
+            font-size: 1.125rem;
+            margin-bottom: 42px;
+        }
+    }
+}
+.logo {
+    width: 80px;
+    @media screen and (min-width: $tablet) {
+        width: 100px; /**/
+    }
+}

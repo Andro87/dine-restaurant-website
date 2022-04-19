@@ -1,0 +1,93 @@
+@import "../styles/variables.scss";
+
+.info_container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 48px;
+    @media screen and (min-width: $tablet) {
+        row-gap: 56px;
+        width: 80%;
+        margin: auto;
+    }
+
+    @media screen and (min-width: $desktop) {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: initial;
+    }
+}
+
+.info_picture {
+    display: flex;
+    width: 100%;
+    img {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+.info_detail {
+    display: flex;
+    align-items: center;
+
+    @media screen and (min-width: $tablet) {
+        justify-content: center;
+    }
+    @media screen and (min-width: $desktop) {
+        justify-content: initial;
+    }
+    svg {
+        margin-bottom: 32px;
+        @media screen and (min-width: $desktop) {
+            margin-bottom: 48px;
+        }
+    }
+}
+
+.container_position {
+    transform: translateY(-80px);
+    @media screen and (min-width: $tablet) {
+        transform: translateY(-120px);
+    }
+    @media screen and (min-width: $desktop) {
+        transform: translateY(0);
+    }
+}
+.picture_order {
+    @media screen and (min-width: $desktop) {
+        order: 2;
+    }
+}
+.top {
+    @media screen and (min-width: $desktop) {
+        transform: translateY(-60px);
+    }
+}
+.bottom {
+    @media screen and (min-width: $desktop) {
+        transform: translateY(60px);
+    }
+}
+.lines {
+    @media screen and (min-width: $tablet) {
+        position: relative;
+    }
+
+    &::after {
+        display: none;
+        @media screen and (min-width: $tablet) {
+            display: initial;
+            content: url("../svgs/patterns/pattern-lines.svg");
+            position: absolute;
+            right: -50px;
+            top: 180px;
+        }
+        @media screen and (min-width: $desktop) {
+            right: -100px;
+            top: 300px;
+        }
+    }
+}
+.detail_position {
+    @media screen and (min-width: $desktop) {
+        justify-content: flex-end;
+    }
+}

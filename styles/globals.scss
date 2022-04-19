@@ -1,0 +1,79 @@
+@import "./variables.scss";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "spartan";
+    src: url("../public/fonts/Spartan-Bold.ttf");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "spartan";
+    src: url("../public/fonts/Spartan-SemiBold.ttf");
+    font-weight: 600;
+}
+@font-face {
+    font-family: "spartan";
+    src: url("../public/fonts/Spartan-Regular.ttf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "spartan";
+    src: url("../public/fonts/Spartan-Light.ttf");
+    font-weight: 300;
+}
+
+:root {
+    //Primary
+    --Beaver: hsl(27, 22%, 51%);
+    --CodGray: hsl(0, 0%, 7%);
+    --White: hsl(0, 0%, 100%);
+
+    //Secondary
+    --Mirage: hsl(234, 30%, 13%);
+    --EbonyClay: hsl(218, 21%, 18%);
+    --ShuttleGray: hsl(217, 14%, 42%);
+    --LightGray: hsl(0, 0%, 56%);
+    --Alert: hsl(0, 43%, 50%);
+    --Dark: hsl(0, 0%, 30%);
+}
+html {
+    font-size: 16px;
+}
+
+h1 {
+    font-family: "spartan";
+    font-weight: 300;
+    font-size: clamp(2rem, 4vw, 4.5rem);
+    line-height: 2.5rem;
+    @media screen and (min-width: $tablet) {
+        line-height: 4rem;
+    }
+    @media screen and (min-width: $desktop) {
+        line-height: 4.5rem;
+    }
+}
+h2 {
+    font-family: "spartan";
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    @media screen and (min-width: $tablet) {
+        font-size: 2.5rem; /*40*/
+        line-height: 3.5rem;
+    }
+}
+h3 {
+    font-family: "spartan";
+    font-weight: 700;
+    font-size: 1.125rem; /*18*/ /*c,e un altro h3 con diversa weight e seze*/
+    line-height: 1.75rem;
+}
+p {
+    font-family: "spartan";
+    font-weight: 400;
+}

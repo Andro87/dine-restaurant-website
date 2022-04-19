@@ -1,0 +1,48 @@
+@import "../styles/variables.scss";
+
+.slide_button {
+    border: none;
+    background: transparent;
+    text-transform: uppercase;
+    color: var(--Dark);
+    font-family: "spartan";
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.75rem;
+    opacity: 0.5;
+    width: fit-content;
+    position: relative;
+    transition: opacity 0.3s ease-in;
+    &:hover {
+        cursor: pointer;
+        opacity: 1;
+    }
+}
+.selected {
+    opacity: 1;
+    &::after {
+        content: "";
+        width: 50px; /**/
+        height: 1px;
+        background-color: var(--Beaver);
+        position: absolute;
+        bottom: 0;
+        right: calc(50% - 20px);
+        @media screen and (min-width: $desktop) {
+            display: none;
+        }
+    }
+
+    &::before {
+        @media screen and (min-width: $desktop) {
+            content: "";
+            width: 500px; /**/
+            height: 1px;
+            background-color: var(--Beaver);
+            position: absolute;
+            left: -530px;
+            top: 50%;
+            z-index: -1;
+        }
+    }
+}

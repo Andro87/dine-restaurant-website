@@ -1,0 +1,180 @@
+@import "./variables.scss";
+
+.main_container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.section_more_info {
+    width: 100%;
+    position: relative;
+    padding: 0 24px 80px; /**/
+
+    @media screen and (min-width: $tablet) {
+        padding: 0 0 120px; /**rivedere con il transform e per i components*/
+    }
+    @media screen and (min-width: $desktop) {
+        padding: 0;
+    }
+
+    &::before {
+        display: none;
+        @media screen and (min-width: $tablet) {
+            display: initial;
+            content: url("../svgs/patterns/pattern-curve-top-right.svg");
+            position: absolute;
+            top: 100px;
+            left: -550px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            top: 250px;
+            left: -50px;
+        }
+    }
+
+    &::after {
+        display: none;
+        @media screen and (min-width: $tablet) {
+            display: initial;
+            content: url("../svgs/patterns/pattern-curve-top-left.svg");
+            position: absolute;
+            bottom: 0;
+            right: -500px;
+        }
+        @media screen and (min-width: $desktop) {
+            bottom: 0;
+            right: -50px;
+        }
+    }
+}
+
+.section_highlights {
+    width: 100%;
+    background-color: var(--CodGray);
+    padding: 72px 24px;
+    @media screen and (min-width: $tablet) {
+        padding: 96px 0;
+    }
+    @media screen and (min-width: $desktop) {
+        padding: 200px 0 120px;
+    }
+}
+.container_highlights {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 64px;
+    @media screen and (min-width: $tablet) {
+        row-gap: 56px;
+        width: 80%;
+        margin: auto;
+        justify-items: center;
+    }
+    @media screen and (min-width: $desktop) {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: initial;
+        justify-items: initial;
+    }
+    svg {
+        margin-bottom: 32px;
+
+        @media screen and (min-width: $desktop) {
+            position: absolute;
+            top: -48px;
+            margin-bottom: initial;
+        }
+    }
+}
+.box_highlights {
+    hr {
+        border: 1px solid var(--White);
+        opacity: 0.15;
+        margin: 24px 0;
+        @media screen and (min-width: $tablet) {
+            margin: 28px 0;
+        }
+        @media screen and (min-width: $desktop) {
+            margin: 24px 0;
+        }
+    }
+}
+
+.section_slides {
+    position: relative;
+    padding: 80px 24px 124px;
+    @media screen and (min-width: $tablet) {
+        padding: 120px 40px;
+    }
+    @media screen and (min-width: $desktop) {
+        padding: 160px 0;
+    }
+    &::before {
+        display: none;
+        @media screen and (min-width: $tablet) {
+            display: initial;
+            content: url("../svgs/patterns/pattern-curve-top-right.svg");
+            position: absolute;
+            top: 0;
+            left: -550px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            top: 0;
+            left: -450px;
+        }
+    }
+}
+.carousel_wrap {
+    position: relative;
+    @media screen and (min-width: $desktop) {
+        width: 80%;
+        margin: auto;
+    }
+    &::before {
+        @media screen and (min-width: $tablet) {
+            content: url("../svgs/patterns/pattern-lines.svg");
+            position: absolute;
+            top: -38px;
+
+            z-index: 1;
+        }
+        @media screen and (min-width: $desktop) {
+            left: -20px;
+        }
+    }
+}
+.section_riservation {
+    width: 100%;
+    padding: 80px 24px;
+    background: url("../public/images/homepage/ready-bg-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media screen and (min-width: $tablet) {
+        padding: 65px;
+        background: url("../public/images/homepage/ready-bg-tablet.jpg");
+        background-repeat: no-repeat;
+        background-size: cover; /**/
+    }
+
+    @media screen and (min-width: $desktop) {
+        background: url("../public/images/homepage/ready-bg-desktop.jpg");
+        background-repeat: no-repeat;
+        background-size: cover; /**/
+        padding: 88px 0;
+    }
+}
+.reservation_container {
+    text-align: center;
+    color: var(--White);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    @media screen and (min-width: $desktop) {
+        max-width: 80%;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: auto;
+    }
+}

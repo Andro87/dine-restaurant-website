@@ -1,0 +1,93 @@
+@import "../styles/variables.scss";
+
+.embla {
+    overflow: hidden;
+}
+.embla__container {
+    display: flex;
+}
+
+.container_slides {
+    position: relative;
+    flex: 0 0 100%;
+    display: grid;
+
+    @media screen and (min-width: $desktop) {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: initial;
+    }
+}
+.slide_img {
+    display: flex;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+
+    img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: 90%;
+        margin: auto;
+    }
+    @media screen and (min-width: $desktop) {
+        width: initial;
+        margin: initial;
+    }
+}
+.slide_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media screen and (min-width: $desktop) {
+        align-items: flex-end;
+    }
+    svg {
+        display: none;
+    }
+}
+.slide_button_container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-top: 48px;
+    margin-bottom: 24px;
+    @media screen and (min-width: $tablet) {
+        flex-direction: row;
+        margin-top: 56px;
+        margin-bottom: 40px;
+        gap: initial;
+        justify-content: space-between;
+    }
+    @media screen and (min-width: $desktop) {
+        flex-direction: column;
+        align-items: initial;
+        justify-content: initial;
+        gap: 12px;
+        max-width: 28rem;
+        order: 2;
+        margin-top: 78px;
+        margin-bottom: initial;
+    }
+}
+.detail_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (min-width: $tablet) {
+        margin: auto;
+    }
+    @media screen and (min-width: $desktop) {
+        margin: initial;
+        order: 1;
+        align-items: initial;
+    }
+    p {
+        margin-bottom: 32px;
+    }
+}

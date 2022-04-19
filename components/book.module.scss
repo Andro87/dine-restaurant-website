@@ -1,0 +1,35 @@
+.book {
+    font-family: "spartan";
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--White);
+    padding: 24px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    width: 245px;
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease-in;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.transparent {
+    border: 1px solid var(--White);
+    background: transparent;
+
+    &:hover {
+        background: var(--White);
+        color: var(--CodGray);
+    }
+}
+
+.dark {
+    border: 1px solid var(--CodGray);
+    background: var(--CodGray);
+    &:hover {
+        background: transparent;
+        color: var(--CodGray);
+    }
+}
